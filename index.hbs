@@ -1,0 +1,37 @@
+{{!< default}}
+
+
+        <div class="container clearfix">
+          <main role="main" class="content">
+              {{#foreach posts}}  
+              <article class="{{post_class}} post">
+                <h2><a href="{{url}}" title="{{title}}">{{title}}</a></h2>
+                <footer class="post-info">Posted on <span class="post-meta"><time datetime="{{date published_at format="YYYY-MM-DD"}}">{{date published_at format="Do MMMM YYYY"}}</time> {{tags separator=", " prefix="Tagged in "}}</span></footer>
+                
+                <p>{{excerpt characters="600"}}&hellip;</p>
+                
+                <a href="{{url}}" title="{{title}}">Read more &raquo;</a>
+              </article>
+              {{/foreach}}
+
+              {{pagination}}
+             
+          </main>
+          
+
+
+          <aside class="author">
+            
+            <img class="profile-image" src="{{asset "img/profile-image.jpg"}}" alt="" />
+            <p class="name">by <strong>Tasya Aditya Rukmana</strong></p>
+            <p class="address">Bandung, Indonesia</p>
+            <p class="link"><a href="http://tadityar.web.id" title="Tasya Aditya Rukmana - Tech Enthusiast">tadityar.web.id</a></p>
+
+            <ul class="social">
+              <li><a class="icon-twitter" href="http://twitter.com/tadityar" title="Follow me on Twitter"></a></li>
+              <li><a class="icon-github" href="https://github.com/tadityar" title="See what I've made on Github"></a></li>
+              <li><a class="icon-facebook-squared" href="https://www.facebook.com/tasyaaditya.rukmana" title="Check out who I am on Facebook"></a></li>
+            </ul>
+
+          </aside>
+        </div>
